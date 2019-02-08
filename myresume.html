@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html>
+<title>W3.CSS Template</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inconsolata">
+<style>
+
+body, html {
+  height: 100%;
+  font-family: "Inconsolata", sans-serif;
+}
+
+.bgimg {
+  background-position: center;
+  background-size: cover;
+  background-image: url("pic.jpg");
+  min-height: 75%;
+}
+
+.menu {
+  display: none;
+}
+h3 {
+  background-color: #666;
+  padding: 10px;
+  text-align: left;
+  font-size: 15px;
+  color: white;
+  font-family: helvetica;
+}
+</style>
+<body>
+
+<!-- Links (sit on top) -->
+<div class="w3-top">
+  <div class="w3-row w3-padding w3-black">
+    <div class="w3-col s3">
+      <a href="#" class="w3-button w3-block w3-black">OBJECTIVE</a>
+    </div>
+    <div class="w3-col s3">
+      <a href="#about" class="w3-button w3-block w3-black">SUMMARY</a>
+    </div>
+    <div class="w3-col s3">
+      <a href="#menu" class="w3-button w3-block w3-black">EDUCATION</a>
+    </div>
+    <div class="w3-col s3">
+      <a href="#where" class="w3-button w3-block w3-black">ACHEIVEMENTS</a>
+    </div>
+  </div>
+</div>
+
+<!-- Header with image -->
+<header class="bgimg w3-display-container w3-grayscale-min" id="objective">
+  <div class="w3-display-bottomleft w3-center w3-padding-large w3-hide-small">
+    <span class="w3-tag">BTECH(IT)</span>
+  </div>
+  <div class="w3-display-middle w3-center">
+    <span class="w3-text-white" style="font-size:90px">arun<br>kumar</span>
+  </div>
+  <div class="w3-display-bottomright w3-center w3-padding-large">
+    <span class="w3-text-white">16030141IT008</span>
+  </div>
+</header>
+<div class="w3-sand w3-grayscale w3-large">
+
+<!-- About Container -->
+<div class="w3-container" id="about">
+  <div class="w3-content" style="max-width:700px">
+    <h5 class="w3-center w3-padding-64"><span class="w3-tag w3-wide">SUMMARY & HOBBIES</span></h5>
+    <p><li>Highly Motivated<li/>
+   Average SGPA around 3.5
+  <li>Looking to fill a position as a Security specialist<li/>
+  Wishing to use my skills to help any corp with upcoming challenges.
+  Enthusiastic and passionate student.
+Average Knowledge in programming languages.
+Nice Leadership abilities and a strong eye detail.
+Willing to learn.<br/></p>
+  <h3><u>HOBBIES</u></h3>
+<ul class="a1"><li>Playing iq games.
+  <li>Cricket
+    <li>Love exercises
+      <li>Reading
+        <li>Making Friends
+          <ul/>
+
+
+  </div>
+</div>
+
+
+<!-- Menu Container -->
+<div class="w3-container" id="menu">
+  <div class="w3-content" style="max-width:700px">
+
+    <h5 class="w3-center w3-padding-48"><span class="w3-tag w3-wide">EDUCATION</span></h5>
+
+    <div class="w3-row w3-center w3-card w3-padding">
+      <a href="javascript:void(0)" onclick="openMenu(event, '10th');" id="myLink">
+        <div class="w3-col s6 tablink">10th</div>
+      </a>
+      <a href="javascript:void(0)" onclick="openMenu(event, '12th');">
+        <div class="w3-col s6 tablink">12th</div>
+      </a>
+    </div>
+
+    <div id="10th" class="w3-container menu w3-padding-48 w3-card">
+      <h5>KENDRYIYA VIDYALAYA NO 2 NAUSENABAUGH, VISAKHAPATNAM</h5>
+      <p class="w3-text-grey"><li>Got 10 CGPA
+      		<li>Was among top 21 students in the region</p><br>
+
+
+    </div>
+
+    <div id="12th" class="w3-container menu w3-padding-48 w3-card">
+
+      <h5>KENDRYIYA VIDYALAYA NO 2 NAUSENABAUGH, VISAKHAPATNAM</h5>
+      <p class="w3-text-grey"><li>Got 88.8% in Boards
+      		<li>scored high in programming language</p><br>
+    </div>
+
+  </div>
+</div>
+
+<!-- Contact/Area Container -->
+<div class="w3-container" id="where">
+  <div class="w3-content" style="max-width:700px">
+   <h5 class="w3-center w3-padding-64"><span class="w3-tag w3-wide">ACHEIVEMENTS</span></h5>
+    <p><li>Good in debate competitions.Regional level(2nd rank)
+    <li>Got 2nd prize in school level coding competetion.
+  <li>Good in playing cricket.
+  <li>Good written and verbal communication skills.
+  </p>
+
+  </div>
+</div>
+
+<!-- End page content -->
+</div>
+
+
+
+<script>
+// Tabbed Menu
+function openMenu(evt, menuName) {
+  var i, x, tablinks;
+  x = document.getElementsByClassName("menu");
+  for (i = 0; i < x.length; i++) {
+    x[i].style.display = "none";
+  }
+  tablinks = document.getElementsByClassName("tablink");
+  for (i = 0; i < x.length; i++) {
+    tablinks[i].className = tablinks[i].className.replace(" w3-dark-grey", "");
+  }
+  document.getElementById(menuName).style.display = "block";
+  evt.currentTarget.firstElementChild.className += " w3-dark-grey";
+}
+document.getElementById("myLink").click();
+</script>
+
+</body>
+</html>
